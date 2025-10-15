@@ -1,0 +1,4 @@
+HOW TO ENCRYPT USING SYMMETRIC
+1) Firstly generate a key- openssl rand -hex 32 > key   {you can open a directory so that the key can be safe in the directory}
+2) Encrypt- openssl enc -aes-256-cbc -salt -in plaintext.txt -out plaintext.enc -pass file:./key   {the plain text is the text you want to encrypt and created with nano editor}
+3) Decrypt- openssl enc -aes-256-cbc -d -in plaintext.enc -out plaintext.dec -pass file:./key
